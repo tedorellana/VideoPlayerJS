@@ -1,0 +1,42 @@
+<html>
+<body>
+    <header>
+        <h1>Video Player</h1>
+    </header>
+    <main class="container">
+        <video class="movie">
+            <source src="./assets/MainVideo.mp4" />
+        </video>
+        <button id = "playButton">
+            Play
+        </button>
+        <button id = "pauseButton">
+            Pause
+        </button>
+    </main>
+
+    <script>
+        const video = document.querySelector('video');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+
+        function MediaPlayer(config) {
+            this.media = config.el
+        }
+
+        MediaPlayer.prototype.play = function() {
+            this.media.play();
+        }
+
+        MediaPlayer.prototype.pause = function() {
+            this.media.pause();
+        }
+
+        const player = new MediaPlayer({ el : video });
+
+        playButton.onclick = () => player.play();
+        pauseButton.onclick = () => player.pause();
+
+    </script>
+</body>
+</html>

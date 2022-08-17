@@ -1,0 +1,13 @@
+{
+  "name": "VideoPlayerJS",
+  "version": "1.0.0",
+  "description": "Media player project using javascript",
+  "license": "MIT",
+  "author": "Ted Orellana",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
